@@ -1,0 +1,389 @@
+{
+  "contractName": "Counter",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "counter",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "incrementByOne",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"counter\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"incrementByOne\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/rishabh/Desktop/ClayStack/truffle_box/contracts/Counter.sol\":\"Counter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/rishabh/Desktop/ClayStack/truffle_box/contracts/Counter.sol\":{\"keccak256\":\"0xe2edf462925c508664dba5994dc2c6891dd82b5281515411239df44a4341a98a\",\"urls\":[\"bzz-raw://8b8063f78d02ebe81893360a4ed59ec124433ff644761dc2c38fccebc1510878\",\"dweb:/ipfs/QmY7mUVumJtbv1XVupX3rPUuHx3R4h1SHe3ueXKfUgYrrT\"]}},\"version\":1}",
+  "bytecode": "0x608060405260008060006101000a81548160ff021916908360ff16021790555034801561002b57600080fd5b5060db8061003a6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806301c791c814603757806361bc221a14603f575b600080fd5b603d6061565b005b60456094565b604051808260ff1660ff16815260200191505060405180910390f35b60008081819054906101000a900460ff168092919060010191906101000a81548160ff021916908360ff16021790555050565b6000809054906101000a900460ff168156fea265627a7a723158205bf0b2fa1bca856450b6e97eb4dfa0eb3e598b33d6715afd042a6c4a79dbc3e564736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806301c791c814603757806361bc221a14603f575b600080fd5b603d6061565b005b60456094565b604051808260ff1660ff16815260200191505060405180910390f35b60008081819054906101000a900460ff168092919060010191906101000a81548160ff021916908360ff16021790555050565b6000809054906101000a900460ff168156fea265627a7a723158205bf0b2fa1bca856450b6e97eb4dfa0eb3e598b33d6715afd042a6c4a79dbc3e564736f6c63430005100032",
+  "sourceMap": "59:114:0:-;;;104:1;81:24;;;;;;;;;;;;;;;;;;;;59:114;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:114:0;;;;;;;",
+  "deployedSourceMap": "59:114:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:114:0;;;;;;;;;;;;;;;;;;;;;;;;112:59;;;:::i;:::-;;81:24;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;112:59;155:7;;:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;112:59::o;81:24::-;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21;\n\ncontract Counter{\n    uint8 public counter = 0;\n\n    function incrementByOne() public {\n        counter++;\n    }\n}",
+  "sourcePath": "/home/rishabh/Desktop/ClayStack/truffle_box/contracts/Counter.sol",
+  "ast": {
+    "absolutePath": "/home/rishabh/Desktop/ClayStack/truffle_box/contracts/Counter.sol",
+    "exportedSymbols": {
+      "Counter": [
+        12
+      ]
+    },
+    "id": 13,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:25:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 12,
+        "linearizedBaseContracts": [
+          12
+        ],
+        "name": "Counter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "counter",
+            "nodeType": "VariableDeclaration",
+            "scope": 12,
+            "src": "81:24:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "81:5:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "104:1:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10,
+              "nodeType": "Block",
+              "src": "145:26:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 8,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "155:9:0",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 7,
+                      "name": "counter",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4,
+                      "src": "155:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 9,
+                  "nodeType": "ExpressionStatement",
+                  "src": "155:9:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 11,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "incrementByOne",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "135:2:0"
+            },
+            "returnParameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "145:0:0"
+            },
+            "scope": 12,
+            "src": "112:59:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 13,
+        "src": "59:114:0"
+      }
+    ],
+    "src": "32:141:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/rishabh/Desktop/ClayStack/truffle_box/contracts/Counter.sol",
+      "exportedSymbols": {
+        "Counter": [
+          12
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".21"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "32:25:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            12
+          ],
+          "name": "Counter",
+          "scope": 13
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "counter",
+              "scope": 12,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint8",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint8",
+                  "type": "uint8"
+                },
+                "id": 2,
+                "name": "ElementaryTypeName",
+                "src": "81:5:0"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
+                },
+                "id": 3,
+                "name": "Literal",
+                "src": "104:1:0"
+              }
+            ],
+            "id": 4,
+            "name": "VariableDeclaration",
+            "src": "81:24:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "incrementByOne",
+              "scope": 12,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5,
+                "name": "ParameterList",
+                "src": "135:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 6,
+                "name": "ParameterList",
+                "src": "145:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint8"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4,
+                              "type": "uint8",
+                              "value": "counter"
+                            },
+                            "id": 7,
+                            "name": "Identifier",
+                            "src": "155:7:0"
+                          }
+                        ],
+                        "id": 8,
+                        "name": "UnaryOperation",
+                        "src": "155:9:0"
+                      }
+                    ],
+                    "id": 9,
+                    "name": "ExpressionStatement",
+                    "src": "155:9:0"
+                  }
+                ],
+                "id": 10,
+                "name": "Block",
+                "src": "145:26:0"
+              }
+            ],
+            "id": 11,
+            "name": "FunctionDefinition",
+            "src": "112:59:0"
+          }
+        ],
+        "id": 12,
+        "name": "ContractDefinition",
+        "src": "59:114:0"
+      }
+    ],
+    "id": 13,
+    "name": "SourceUnit",
+    "src": "32:141:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xADD70B34410514843b09678FDaf529741986e6c5",
+      "transactionHash": "0x00daedcf0e1edc065983837769e0493f118d7cba1c0a1e90d5d404ab4c353701"
+    }
+  },
+  "schemaVersion": "3.4.0",
+  "updatedAt": "2021-05-07T00:18:26.789Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

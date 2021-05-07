@@ -6,7 +6,7 @@ import "./App.css";
 
 class App extends Component {
   state = { storageValue: 0, web3: null, accounts: null, contract: null };
-
+  
     initialise = async () => {
     try {
       // Get network provider and web3 instance.
@@ -22,10 +22,10 @@ class App extends Component {
         CounterContract.abi,
         deployedNetwork && deployedNetwork.address,
       );
-
+      const response = await instance.methods.counter().call();
       // Set web3, accounts, and contract to the state, and then proceed with an
-      // example of interacting with the contract's methods.storageValu
-      this.setState({ web3, accounts, contract: instance });
+      // example of interacting with the contract's methods.storageValue
+      this.setState({ web3, accounts, contract: instance,storageValue: response });
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -37,11 +37,15 @@ class App extends Component {
 
   componentDidMount = async () => {
       await this.initialise();
+      window.ethereum.on('accountsChanged', async (accounts) => {
+        this.setState({accounts});
+      })
   };
 
   incrementCounter = async () => {
     const { accounts, contract } = this.state;
-    await contract.methods.incrementByOne().send({ from: accounts[0] });
+    let acc = "0x13d35919269C9Eb1471F4aB1564C850151C9Ca73";
+    await contract.methods.incrementByOne().send({ from:accounts[0] });
     const response = await contract.methods.counter().call();
     this.setState({ storageValue: response });
   }
@@ -55,7 +59,7 @@ class App extends Component {
       <div className="App">
         <h1>Hi this side Rishabh Mishra!!!</h1>
         <h3>Address :: {this.state.accounts[0]}</h3>
-      
+        <h3>Current Counter Value : {this.state.storageValue} </h3>
         <button onClick={this.incrementCounter} > Inrcrement Counter </button>
       </div>
     );
